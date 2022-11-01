@@ -8,8 +8,8 @@ const bodyParser = require('body-parser')
 
 const mongoose = require('mongoose');
 
-//koneksi db
-mongoose.connect('mongodb+srv://rmd:S4571msQFpmKpNLU@cluster0.zyvnaxw.mongodb.net/?retryWrites=true&w=majority',(err,success)=>{
+//koneksi db gKxpVxTIuZju9rbh
+mongoose.connect('mongodb+srv://tugaseduwork:gKxpVxTIuZju9rbh@tugaseduwork.lban5qn.mongodb.net/?retryWrites=true&w=majority',(err,success)=>{
     if(err){
         console.log("Tidak dapat tersambung ke database,Error")
     }else{
