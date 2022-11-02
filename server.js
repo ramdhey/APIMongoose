@@ -3,7 +3,7 @@ const cors = require('cors')
 const userController = require('./controller/users')
 
 const app = express();
-const PORT = 2720
+const PORT = 3001
 const bodyParser = require('body-parser')
 
 const mongoose = require('mongoose');
