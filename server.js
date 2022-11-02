@@ -1,15 +1,18 @@
+require('dotenv').config({ path: './config.env' });
 const express = require('express');
 const cors = require('cors')
 const userController = require('./controller/users')
+const MONGODB_URI = 'mongodb+srv://tugaseduwork:gKxpVxTIuZju9rbh@tugaseduwork.lban5qn.mongodb.net/?retryWrites=true&w=majority'
+
 
 const app = express();
-const PORT = 3001
+const PORT = process.env.PORT || 3001;
 const bodyParser = require('body-parser')
 
 const mongoose = require('mongoose');
 
 //koneksi db gKxpVxTIuZju9rbh
-mongoose.connect('mongodb+srv://tugaseduwork:gKxpVxTIuZju9rbh@tugaseduwork.lban5qn.mongodb.net/?retryWrites=true&w=majority',(err,success)=>{
+mongoose.connect(MONGODB_URI,(err,success)=>{
     if(err){
         console.log("Tidak dapat tersambung ke database,Error")
     }else{
